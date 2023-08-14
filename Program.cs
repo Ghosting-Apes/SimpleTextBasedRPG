@@ -13,14 +13,17 @@ namespace SimpleTextBasedRPG
             Console.WriteLine("Welcome doctor in training to the world of medicine!");
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
-            Console.WriteLine($"Mr. {name}, before you can become a doctor you must pass one final exam.");
-            Console.WriteLine("We will begin the examination at once good luck!");
             
             if (name == "Aidan")
             {
                 Console.WriteLine("You can't be dr your are imposter");
+                Console.Read();
                 return;
             }
+            
+            Console.WriteLine($"Mr. {name}, before you can become a doctor you must pass one final exam.");
+            Console.WriteLine("We will begin the examination at once good luck!");
+            
 
             Console.WriteLine("Question 1: What is the powerhouse of the cell?");
             Console.WriteLine("A The Mitochondria");
