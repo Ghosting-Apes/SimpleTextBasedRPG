@@ -9,13 +9,13 @@ namespace SimpleTextBasedRPG
             bool q1 = false;
             bool q2 = false;
             bool q3 = false;
-            bool pass = false;
             
             Console.WriteLine("Welcome doctor in training to the world of medicine!");
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
-            Console.WriteLine("Mr. " + name + ", before you can become a doctor you must pass one final exam.");
+            Console.WriteLine($"Mr. {name}, before you can become a doctor you must pass one final exam.");
             Console.WriteLine("We will begin the examination at once good luck!");
+            
             if (name == "Aidan")
             {
                 Console.WriteLine("You can't be dr your are imposter");
@@ -53,20 +53,8 @@ namespace SimpleTextBasedRPG
                 q3 = true;
             }
 
-            if (q1 == true && q2 == true && q3 == true)
-            {
-                pass = true;
-            }
-
-            if (pass == true)
-            {
-                Console.WriteLine("Congratulations, you are now a doctor, Dr. " + name + "!");
-            }
-            else
-            {
-                Console.WriteLine("I'm sorry Mr. " + name + ", but I am afraid that it is too soon for you to become a doctor.");
-            }
-
+            Console.WriteLine(q1 && q2 && q3 ? $"Congratulations, you are now a doctor, Dr. {name}!" : 
+                                               $"I'm sorry Mr. {name}, but I am afraid that it is too soon for you to become a doctor.");
             Console.Read();
         }
     }
